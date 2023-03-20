@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 def home(request):
@@ -47,4 +47,6 @@ def signup(request):
 
     return render(request, 'authentication/signup.html')
 def signout(request):
-    pass
+    logout(request)
+    messages.success(request, 'logout sucess')
+    return redirect('home')
