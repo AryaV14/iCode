@@ -29,15 +29,35 @@ def signin(request):
 
 
     return render(request, 'authentication/signin.html')
+
+
+
+
+
 def signup(request):
     if request.method == "POST":
+
         username = request.POST['username']
         name = request.POST['name']
-        email = request.POST['email']
         password = request.POST['password']
 
+        if User.objects.filter(username=username):
+            messages.error(request, "Username already exist!")
+            return redirect('/signup')
+        
+        
+        if len(username)>10:
+            messages.error(request, "Username less than 10 characters please")
+            return redirect('/signup')
 
-        myuser = User.objects.create_user(username,email,password)
+
+        if not username.isalnum():
+            messages.error(request, "Username should be Alpha Numeric")
+            return redirect('/signup')
+
+
+
+        myuser = User.objects.create_user(username,password)
         myuser.first_name = name
         myuser.save()
 
@@ -46,6 +66,10 @@ def signup(request):
         return redirect('signin')
 
     return render(request, 'authentication/signup.html')
+
+
+
+
 def signout(request):
     logout(request)
     messages.success(request, 'logout sucess')

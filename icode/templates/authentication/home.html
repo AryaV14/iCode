@@ -13,29 +13,40 @@
 </head>
 <body>
     <div class="landing-page">
+
         <div class="navbar">
+
             <div class="logo">
                 <h2>iCode</h2>
             </div>
+
             <div class="navbar-mid">
                 <h2>About</h2>
                 <h2>Blog</h2>
             </div>
+
             <div class="login">
                 <button class="login-btn"> <a href="/signin"> Log In </a></button>
             </div>
+
         </div>
 
         <div class="content">
-            <!-- {% for message in messages %} 
-            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert" >
-                <strong>Message: </strong> {{messages}}
-                <button type="submit" class="close" data-dismiss="alert" aria-label="close">
-                <span area-hidden="true">&times;</span>
-            </button>
-            </div>
-            {% endfor %}  -->
+
+
+
+            {% for message in messages %} 
+                <strong>Message: </strong> {{message}}
+                
+            
+            {% endfor %} 
+
+
+
+
             <div class="content-left">
+
+
                 <div class="content-heading">
                     <h1>Let's Build Together</h1>
                 </div>
@@ -48,16 +59,26 @@
                         <p class="fadeText"> <a href="/signin"> Log In </a></p>
                     </div>
                 </div>
+
+
             </div>
 
             <div class="content-right">
+
                 <img src="{% static 'img1.svg' %}" alt="" class="img1">
                 <img src="{% static 'img2.svg' %}" alt="" class="img2">
                 
                 <div class="rect1"></div>
                 <div class="rect2"></div>
+
             </div>
+
+
         </div>
+
+
     </div>
+
+
 </body>
 </html>
