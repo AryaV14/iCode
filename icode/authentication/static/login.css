@@ -175,6 +175,10 @@ background: #0D121A;
     /* margin-top: -4%; */
     position: absolute;
 }
+a:visited { 
+    text-decoration: none; 
+    /* color: orange;  */
+   }
 .content-left .getstarted p{
     position: absolute;
 width: 290px;

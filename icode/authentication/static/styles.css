@@ -12,6 +12,7 @@ body{
     
     background: #E6DFF1;
 }
+
 .navbar{
     display: flex;
     flex-direction: row;
