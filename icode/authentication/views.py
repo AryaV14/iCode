@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-
+# name = ''
 # Create your views here.
 def home(request):
     return render(request, 'authentication/home.html')
@@ -57,7 +57,7 @@ def signup(request):
 
 
 
-        myuser = User.objects.create_user(username,password)
+        myuser = User.objects.create_user(username,' ',password)
         myuser.first_name = name
         myuser.save()
 
