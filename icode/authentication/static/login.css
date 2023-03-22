@@ -329,3 +329,10 @@ z-index: 1;
   .forgot-pwd p:hover{
     text-decoration: underline;
 }
+.alert-successful{
+    position: absolute;
+    left: 144px;
+    top: 470px;
+    font-family: 'Roboto';
+    font-size: 17px;
+}

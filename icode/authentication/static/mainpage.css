@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+
+body{
+    background: #F4F0F9;
+    font-family: 'Roboto';
+    overflow-x: hidden;
+    /* padding-left: rem; */
+}
+header{
+    position: fixed;
+    top: 0; left:0;
+    z-index: 1000;
+    height:100%;
+    width:17rem;
+    /* background: rgb(231, 232, 233); */
+    background: #5A4C71;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user .logo{
+    margin-top: -1rem;
+    font-family: 'Lobster Two';
+font-style: normal;
+font-weight: 400;
+font-size: 23px;
+    padding: 0;
+    color: #F4F0F9;
+}
+header .user .pic{
+    height:8.4rem;
+    width:8.4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    /* margin-top: 0.rem; */
+    border:.7rem solid var(--yellow);
+}
+header .user .name{
+    margin-top: 0.8rem;
+    font-size: 2rem;
+    padding: 0;
+    color: #F4F0F9;
+}
+
+header .user .public-status{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #F4F0F9;
+    margin-top: -0.5rem;
+}
+header .user .public-status p{
+    margin: 0rem 1.5rem;
+}
+
+header .navbar{
+    margin-top: 1.2rem;
+    width:100%;
+}
+
+header .navbar ul{
+    margin-top: 1.5rem;
+    list-style: none;
+    padding:1rem rem;
+}
+
+
+header .navbar ul li a{
+    display: block;
+    padding:0.6rem;
+    margin:0.5rem -0.7rem;
+    /* background:rgb(91, 101, 104); */
+    color: #F4F0F9;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+header .navbar ul li a:hover{
+    background:  #F4F0F9;
+    color:  #5A4C71;
+    font-weight: bold;
+}
+#settings{
+    margin-top: 4rem;
+    margin-bottom: -1.5rem;
+}
+section{
+    min-height: 100vh;
+    padding:1rem;
+}
+.dashboard{
+    display: flex;
+    justify-content: center;
+}
+.top-navbar{
+    display: flex;
+}
+h3{
+    padding: 0rem 2rem;
+    margin: 1rem 3rem;
+}
+.form-input{
+   height: 3em;
+   width: 15rem;
+   margin-left: 15rem;
+   border-radius: 5rem;
+   border:  #5A4C71;
+   padding: 0rem 1rem;
+}
+.btn{
+    
+}
