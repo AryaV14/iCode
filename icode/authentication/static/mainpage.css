@@ -101,17 +101,115 @@ section{
     display: flex;
 }
 h3{
+    position: absolute;
+    top: 0.7rem;
+    left: 24rem;
+    font-size: 24px;
     padding: 0rem 2rem;
-    margin: 1rem 3rem;
+    /* margin: 1rem 8rem; */
 }
 .form-input{
+    position: absolute;
+    top: 2rem;
+    left: 48rem;
    height: 3em;
    width: 15rem;
-   margin-left: 15rem;
+   /* margin-left: 3rem; */
    border-radius: 5rem;
    border:  #5A4C71;
    padding: 0rem 1rem;
 }
-.btn{
-    
+.top-navbar .btn{
+    position: absolute;
+    top: 2rem;
+    left: 63rem;
+    height: 3em;
+    width: 3rem;
+    background-color: white;
+    /* margin-left: -2.4rem; */
+    border: none;
+    border-radius: 5rem;
 }
+.bellbtn{
+    position: absolute;
+    top: 1.6rem;
+    left: 72rem;
+    height: 3.8em;
+    width: 3.4rem;
+    /* margin-left: 8rem; */
+    border: none;
+    background-color: white;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+.bellbtn:hover{
+    background-color: #5A4C71;
+    color: white;
+}
+.bellbtn i{
+    scale: 1.4;
+}
+.dropdown{
+    width: 1%;
+    padding: 0rem 1rem;
+    margin: 0.5rem 2rem;
+   
+}
+/* .dropdown .btn{
+    background-color: white;
+    border: none;
+} */
+.dropdown{
+    position: absolute;
+    color: black;
+    /* scale: 1.4; */
+    top: 1.2rem;
+    right: 4rem;
+    height: 3em;
+    width: 4.8rem;
+    border: none;
+    background-color: white;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+.dropdown a{
+    position: absolute;
+    top: 0.85rem;
+    right: 1.2rem;
+    text-decoration: none;
+    /* scale: 1.2; */
+}
+.dropdown:hover{
+    background-color: #d9d9d9;
+}
+.dropdown i{
+    margin-left: 0.8rem;
+}
+/* .dropdown:hover{
+    background-color: #5A4C71;
+    color: white;
+} */
+/* .dropdown .btn:hover{
+    background-color: white;
+    border: none;
+} */
+.dropdown-menu{
+    background-color: red;
+    display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #2e21bc;
+  border: 1px solid #ccc;
+  z-index: 1;
+}
+.dropdown-menu li {
+    color: #5A4C71;
+    display: block;
+  }
+  
+  /* .dropdown:hover .dropdown-menu {
+    display: block;
+    color: #5A4C71;
+  }
+   */
