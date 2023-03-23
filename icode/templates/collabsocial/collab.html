@@ -1,4 +1,5 @@
 
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -6,9 +7,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'mainpage.css' %}">
+    <title>Collaborate</title>
 </head>
 <body>
+
+
+
+<!-- 
+    {% for message in messages %} 
+        <strong>Message: </strong> {{message}}
+        
+    {% endfor %} 
+
+
+    {% if user.is_authenticated %} 
+    <h3>Welcome {{ name }}</h3>
+    <h4>Successfully logged in !</h4>
+    {% else %} 
+    <h3>Wrong page</h3>
+    {% endif %} -->
+
+    <header>
+
+        <div class="user">
+            <!-- <img src="images/logo.png.png" alt="My logo" class="logo"> -->
+            <p class="logo">iCode</p>
+            <img src="{% static 'user.webp' %}" alt="Profile Photo" class="pic">
+            <p class="name">{{name}}</p>
+            <div class="public-status">
+                <p class="following"><b>30</b><br>FOLLOWERS
+                </p>
+                <p class="follower"><b>30</b><br>FOLLOWING</p>
+            </div>
+        </div>
+    
+        <nav class="navbar">
+            <hr>
+            <ul>
+                <li><a href="/profilec">Dashboard</a></li>
+                <li><a href="/collabsocial">Collaborate</a></li>
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#chat">Chat</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#settings" id="settings">Settings</a></li>
+                <br><br>
+                <li><a href="/signout" >SignOut</a></li>
+            </ul>
+        </nav>
+        
+    
+    </header>
+    <center>
+        
     <div class="container">
 
         <div class="row justify-content-center mt-3">
@@ -34,12 +86,19 @@
                 <p><strong>{{post.author }}</strong> {{ post.created_on }}</p>
                 <p>{{ post.body }}</p>
                 <p><i> 
-                {{ post.stacks }}
+                    {% for st in post.stacks.all %}
+                    {{ st }}
+                    {% endfor %}
 
                 </i></p>
             </div>
         </div>
         {% endfor %} 
     </div>
+    
+
+
+</center>
+
 </body>
 </html>

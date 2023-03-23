@@ -7,8 +7,6 @@ from django.contrib.auth import authenticate, login, logout
 def home(request):
     return render(request, 'authentication/home.html')
 
-def index(request):
-    return render(request, 'authentication/index.html')
 
 def signin(request):
     if request.method == "POST":
@@ -19,12 +17,12 @@ def signin(request):
         if user is not None:
             login(request,user)
             name = user.first_name
-            return render(request, 'authentication/index.html', {'name': name})
+            return render(request, 'profilec/index.html', {'name': name})
 
 
         else:
             messages.error(request, "Wrong Credentials")
-            return redirect('home')
+            return redirect('signin')
 
 
 
