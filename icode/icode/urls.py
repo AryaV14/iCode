@@ -19,6 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('authentication.urls')),
-    path('collabsocial/', include('collabsocial.urls'))
+    path('collabsocial/', include('collabsocial.urls')),
+    path('profilec/', include('profilec.urls'))
 
 ]

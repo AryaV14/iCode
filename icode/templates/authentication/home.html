@@ -35,14 +35,6 @@
 
 
 
-            {% for message in messages %} 
-            <div class="alert-successful">
-                <strong>Message: </strong> {{message}}
-            </div>
-            
-            {% endfor %} 
-
-
 
 
             <div class="content-left">
@@ -59,7 +51,20 @@
                         <p>Already a member?</p>
                         <p class="fadeText"> <a href="/signin"> Log In </a></p>
                     </div>
+
+             
+
                 </div>
+
+                       
+            {% for message in messages %} 
+            <div class="alert-successful">
+                <strong> {{message}} </strong>
+                
+            </div>
+            
+            {% endfor %} 
+
 
 
             </div>
