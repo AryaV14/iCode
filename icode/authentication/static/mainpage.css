@@ -90,16 +90,17 @@ header .navbar ul li a:hover{
     margin-bottom: -1.5rem;
 }
 section{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding:1rem;
 }
-.dashboard{
+/* .dashboard{
     display: flex;
     justify-content: center;
-}
-.top-navbar{
+} */
+/* .top-navbar{
     display: flex;
-}
+    width: 70%;
+} */
 h3{
     position: absolute;
     top: 0.7rem;
