@@ -3,7 +3,9 @@ from .models import Post,Stacks
 
 class CustomMMCF(forms.ModelMultipleChoiceField):
     def label_from_instance(self, member):
-        return "%s" % member.stacks
+        return "%s" % member.name
+    
+    
 class PostForm(forms.ModelForm):
     body = forms.CharField(
         label='',
@@ -12,7 +14,7 @@ class PostForm(forms.ModelForm):
         'placeholder': 'Say about the project...'
         })
     )
-    stacks = forms.ModelChoiceField(
+    stacks = CustomMMCF(
         
     queryset= Stacks.objects.all(), 
      widget = forms.CheckboxSelectMultiple

@@ -6,8 +6,9 @@ from django.contrib.auth.models import User
 class Stacks(models.Model):
     name = models.CharField(max_length=50)
 
-    def __str__(self) :
-        return self.name
+    def __str__(self):
+        return "%s" % self.name
+
 class Post(models.Model):
     body = models.TextField()
     # describe the project 
@@ -15,4 +16,4 @@ class Post(models.Model):
     created_on = models.DateField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     def __str__(self) :
-        return self.body
+        return (self.body, self.stacks)
