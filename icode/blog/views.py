@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views import View
 from .models import Blog
 # Create your views here.
-from .forms import BlogForm
+from .forms import BlogForm, CommentForm
 
 class BlogListView(View):
     def get(self, request, *args, **kwargs):
@@ -33,5 +33,14 @@ class BlogListView(View):
 
         return render(request, 'blog/blog.html', context)
         
-
+class BlogDetailView(View):
+    def get(self, request,pk, *args, **kwargs):
+        blog = Blog.objects.get(pk=pk)
+        form = CommentForm()
+        context = {
+            'blog' : blog,
+            'form' : form
+        }
+        return render(request, 'blog/blog_details.html', context)
+        
     

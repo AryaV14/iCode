@@ -87,6 +87,8 @@
                 <p><strong>{{post.author }}</strong> {{ post.created_on }}</p>
                 <p>{{ post.body }}</p>
                 <i>{{ post.stacks }}</i>
+                <a href="{% url 'post-detail' post.pk %}">More...</a>
+
                 
             </div>
         </div>

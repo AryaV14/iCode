@@ -1,5 +1,5 @@
 from django import forms
-from .models import Blog
+from .models import Blog, Comments
 
 
     
@@ -8,7 +8,7 @@ class BlogForm(forms.ModelForm):
         label='',
         widget=forms.Textarea(attrs={
         'rows' : '5',
-        'placeholder': 'Erite something..'
+        'placeholder': 'Write something..'
         })
     )
    
@@ -16,3 +16,17 @@ class BlogForm(forms.ModelForm):
     class Meta:
         model = Blog
         fields = ['body']
+
+class CommentForm(forms.ModelForm):
+    comment = forms.CharField(
+        label='',
+        widget=forms.Textarea(attrs={
+        'rows' : '3',
+        'placeholder': 'Thoughts?..'
+        })
+    )
+   
+
+    class Meta:
+        model = Comments
+        fields = ['comment']
