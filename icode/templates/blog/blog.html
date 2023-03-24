@@ -1,3 +1,5 @@
+
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -6,17 +8,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'mainpage.css' %}">
-    <title>MainPage</title>
+    <title>Blog</title>
 </head>
 <body>
 
 
 
+<!-- 
+    {% for message in messages %} 
+        <strong>Message: </strong> {{message}}
+        
+    {% endfor %} 
 
+
+    {% if user.is_authenticated %} 
+    <h3>Welcome {{ name }}</h3>
+    <h4>Successfully logged in !</h4>
+    {% else %} 
+    <h3>Wrong page</h3>
+    {% endif %} -->
 
     <header>
 
         <div class="user">
+            <!-- <img src="images/logo.png.png" alt="My logo" class="logo"> -->
             <p class="logo">iCode</p>
             <img src="{% static 'user.webp' %}" alt="Profile Photo" class="pic">
             <p class="name">{{name}}</p>
@@ -38,25 +53,16 @@
                 <li><a href="/blog">Blog</a></li>
                 <li><a href="#settings" id="settings">Settings</a></li>
                 <br><br>
-                <li><a href="/signout" id="logout">Logout</a></li>
-
-                
+                <li><a href="/signout" >SignOut</a></li>
             </ul>
         </nav>
+        
     
     </header>
-
-    <section class="dashboard" id="dashboard">
-
-        <div class="top-navbar">
-            <h3>Hello {{name}}</h3>
-            <form action="" method="get">
-                <input class="form-input" type="text" placeholder="Search here" name="query">
-                <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-            <button class="bellbtn"><i class="fa-regular fa-bell"></i></button>
-        </div>
+    <center>
         
+    <div class="container">
+
         <div class="row justify-content-center mt-3">
             <div class="col-md-5 col-sm-12 border-bottom">
                 <h1>
@@ -72,7 +78,7 @@
             </div>
         </div>
 
-        {% for post in post_thought %}
+        {% for post in blog_list %}
         <div class="row justify-content-center mt-3">
             <div class="col-md-5 col-sm-12 border-bottom">
                 <h1>
@@ -80,6 +86,7 @@
                 </h1>
                 <p><strong>{{post.author }}</strong> {{ post.created_on }}</p>
                 <p>{{ post.body }}</p>
+                <i>{{ post.stacks }}</i>
                 
             </div>
         </div>
@@ -87,9 +94,8 @@
     </div>
     
 
-        
-    </section>
-    
+
+</center>
 
 </body>
 </html>

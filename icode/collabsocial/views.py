@@ -27,7 +27,8 @@ class PostListView(View):
         context = {
             'post_list' : posts,
             'form' :form,
-            'name': request.user
+            'name' : request.user.first_name
+
         }
 
         return render(request, 'collabsocial/collab.html', context)

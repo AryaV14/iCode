@@ -11,8 +11,15 @@ class PostForm(forms.ModelForm):
         'placeholder': 'Say about the project...'
         })
     )
+    stacks = forms.CharField(
+        label='',
+        widget=forms.Textarea(attrs={
+        'rows' : '5',
+        'placeholder': 'Add the Stacks...'
+        })
+    )
     
 
     class Meta:
         model = Post
-        fields = ['body']
+        fields = ['body', 'stacks']
