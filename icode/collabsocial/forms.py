@@ -12,7 +12,7 @@ class PostForm(forms.ModelForm):
         'placeholder': 'Say about the project...'
         })
     )
-    stacks = forms.ModelMultipleChoiceField(
+    stacks = forms.ModelChoiceField(
         
     queryset= Stacks.objects.all(), 
      widget = forms.CheckboxSelectMultiple
