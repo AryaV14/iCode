@@ -66,12 +66,13 @@
         <div class="row justify-content-center mt-3">
             <div class="col-md-5 col-sm-12 border-bottom">
                 <h1>
-                        Add a post {{ name }}
+                        Add a post 
                 </h1>
                 <form action="" method="post">
                     {% csrf_token %}
 
                     {{ form }}
+                    <br><br>
                     <button type="submit">Submit!</button>
                 </form>
             </div>
@@ -85,12 +86,7 @@
                 </h1>
                 <p><strong>{{post.author }}</strong> {{ post.created_on }}</p>
                 <p>{{ post.body }}</p>
-                <p><i> 
-                    {% for st in post.stacks.all %}
-                    {{ st }}
-                    {% endfor %}
-
-                </i></p>
+                
             </div>
         </div>
         {% endfor %} 

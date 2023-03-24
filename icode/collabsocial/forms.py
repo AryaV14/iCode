@@ -1,10 +1,7 @@
 from django import forms
-from .models import Post,Stacks
+from .models import Post
 
-class CustomMMCF(forms.ModelMultipleChoiceField):
-    def label_from_instance(self, member):
-        return "%s" % member.name
-    
+
     
 class PostForm(forms.ModelForm):
     body = forms.CharField(
@@ -14,13 +11,8 @@ class PostForm(forms.ModelForm):
         'placeholder': 'Say about the project...'
         })
     )
-    stacks = CustomMMCF(
-        
-    queryset= Stacks.objects.all(), 
-     widget = forms.CheckboxSelectMultiple
     
-    )
 
     class Meta:
         model = Post
-        fields = ['body', 'stacks']
+        fields = ['body']
