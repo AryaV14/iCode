@@ -23,6 +23,7 @@ class PostListView(View):
             new_post = form.save(commit=False)
             new_post.author = request.user
             new_post.save()
+            form = PostForm()
 
         context = {
             'post_list' : posts,

@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'mainpage.css' %}">
+    <link rel="stylesheet" href="{% static 'collab.css' %}">
     <title>Collaborate</title>
 </head>
 <body>
@@ -52,8 +53,8 @@
                 <li><a href="#chat">Chat</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#settings" id="settings">Settings</a></li>
-                <br><br>
-                <li><a href="/signout" >SignOut</a></li>
+                <!-- <br><br> -->
+                <li><a href="/signout" id="logout" >SignOut</a></li>
             </ul>
         </nav>
         
@@ -63,23 +64,42 @@
         
     <div class="container">
 
-        <div class="row justify-content-center mt-3">
+        <div class="top-navbar">
+            <!-- <h3>Hello {{name}}</h3> -->
+            <form action="" method="get">
+                <input class="form-input" type="text" placeholder="Search here" name="query">
+                <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <button class="bellbtn"><i class="fa-regular fa-bell"></i></button>
+        </div>
+
+
+        <div class="tabs">
+            <button class="find-collaborator">Find Collaborators</button>
+            <button class="be-collaborator">Collaborate on a project</button>
+        </div>
+
+        <div class="row justify-content-center mt-3 find">
             <div class="col-md-5 col-sm-12 border-bottom">
                 <h1>
-                        Add a post 
+                        Your project
                 </h1>
                 <form action="" method="post">
                     {% csrf_token %}
 
                     {{ form }}
+            
                     <br><br>
-                    <button type="submit">Submit!</button>
+                    <button type="submit">Publish</button>
                 </form>
+                
             </div>
         </div>
+        <h2 class="requirements">Requirements</h2>
 
-        {% for post in post_list %}
-        <div class="row justify-content-center mt-3">
+        
+        <div class="row justify-content-center mt-3 be">
+            {% for post in post_list %}
             <div class="col-md-5 col-sm-12 border-bottom">
                 <h1>
                         Post
@@ -88,10 +108,34 @@
                 <p>{{ post.body }}</p>
                 
             </div>
+            {% endfor %} 
         </div>
-        {% endfor %} 
+        
+        <input type="text" class="skill-input" placeholder="Skills">
+        <button class="add-btn">+</button>
+
+        <div class="added-skills">
+            <button class="skill">Django  x</button>
+            <button class="skill">JavaScript  x</button>
+        </div>
+        
     </div>
-    
+
+    <div class="suggestions">
+        <div class="user"><h1 style="text-align: center;">Suggestions<hr></h1></div>
+        <div class="user">
+            <h2 style="text-align: left;">Riya</h2>
+            <button class="invite">Invite</button>
+        </div>
+        <div class="user">
+            <h2 style="text-align: left;">Arya</h2>
+            <button class="invite">Invite</button>
+        </div>
+        <div class="user">
+            <h2 style="text-align: left;">Neha</h2>
+            <button class="invite">Invite</button>
+        </div>
+    </div>
 
 
 </center>

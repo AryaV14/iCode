@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+
+.tabs{
+    position: absolute;
+    top: 6rem;
+    left: 18rem;
+}
+.tabs button{
+    background-color:#F4F0F9;
+    color: #5a4c71b5;
+    font-family: 'Roboto';
+    font-size: 16px;
+    height: 2.4rem;
+    width: 14rem;
+    border-radius: 0.5rem;
+    padding: 0rem 1rem;
+    margin: 0rem 0.7rem;
+    border: none;
+    cursor: pointer;
+}
+.tabs button:hover{
+    background-color:white;
+    color: black;
+}
+.find{
+    position: absolute;
+    top: 10rem;
+    left: 18.7rem;
+    width: 720px;
+    height: 399.78px;
+    background-color:white;
+    border-radius: 0.5rem;
+}
+.find h1{
+    text-align: left;
+    margin-left: 3.6rem;
+    font-size: 26px;
+}
+.find form{
+    position: absolute;
+    /* top: 14rem; */
+    /* left: 18rem; */
+    width: 44rem;
+height: 20rem;
+}
+.find button{
+    position: absolute;
+    top: 16rem;
+    left: 34.8rem;
+    height: 2.4rem;
+    width: 5.6rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.requirements{
+    position: absolute;
+    top: 23rem;
+    left: 20.6rem;
+    color: black;
+    font-family: 'Roboto';
+    font-size: 26px;
+    height: 2rem;
+    width: 8rem;
+    border-radius: 0.5rem;
+    padding: 0rem 1rem;
+    margin: 0rem 0.7rem;
+    border: none;
+
+}
+.suggestions{
+    /* background-color: white; */
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    left: 68rem;
+    top: 8.8rem;
+    
+}
+/* .suggestions .user{
+    background-color: white;
+} */
+.suggestions .user{
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    height: 70px;
+    width: 360px;
+    border-radius: 0.5rem;
+    margin: 1rem 0rem;
+    /* text-align: center; */
+    padding: 0.2rem 0.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.suggestions .user .invite{
+    height: 2rem;
+    width: 5rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: black;
+    color: white;
+    margin-left: 227px;
+    cursor: pointer;
+}
+.be{
+    /* position: absolute;
+    top: 30rem;
+    left: 40rem; */
+    /* margin-top: 40rem;
+    margin-left: -12rem;
+    background-color: blue; */
+    position: absolute;
+    top: 36rem;
+    left: 18.7rem;
+    width: 720px;
+    height: 520px;
+    background-color:white;
+    border-radius: 0.5rem;
+}
+.be .border-bottom{
+background-color: #F4F0F9;
+margin: 1rem 2rem;
+padding: 0.02rem 0rem;
+border-radius: 0.5rem;
+}
+.find .textarea{
+    background-color: #F4F0F9;
+    width: 580px;
+    height: 100px;
+    border-radius: 0.5rem;
+    resize: none;
+    font-size: 18px;
+    font-family: 'Roboto';
+    padding: 0.6rem 0.6rem;
+}
+/* .find .textarea::placeholder{
+    font-size: 18px;
+    font-family: 'Roboto';
+    padding: 0.3rem 0.6rem;
+} */
+.skill-input{
+    height: 36px;
+    width: 250px;
+    position: absolute;
+    top: 23rem;
+    left: 35rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #F4F0F9;
+    padding-left: 1rem;
+ }
+ .skill-input::placeholder{
+    font-family: 'Roboto';
+    font-size: 17px;
+    /* padding: 0.4rem; */
+ }
+ 
+ .add-btn{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 22.94rem;
+    left: 50rem;
+    text-align: center;
+    color: rgb(52, 52, 52);
+    border-color: black;
+    background-color: white;
+    font-family: 'Roboto';
+    font-size: 22px;
+    /* font-weight: bold; */
+    border-radius: 0.5rem;
+    cursor: pointer;
+ }
+ .added-skills{
+    position: absolute;
+    top: 27rem;
+    left: 21.8rem;
+ }
+ .added-skills .skill{
+    margin-left: 10px;
+    width: 98px;
+    height: 32px;
+    color: rgb(52, 52, 52);
+    border-color: black;
+    background-color: white;
+    border-radius: 0.5rem;
+    font-family: 'Roboto';
+    font-weight: bold;
+ }
