@@ -1,10 +1,6 @@
-from django.shortcuts import render
 
-# Create your views here.
+from django.shortcuts import redirect, render
+
 def index(request):
-    context = {
-            
-            'name': request.user
-        }
+    return render(request, 'profilec/index.html')
 
-    return render(request, 'profilec/index.html', context)

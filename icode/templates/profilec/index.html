@@ -35,7 +35,7 @@
                 <li><a href="#explore">Explore</a></li>
                 <li><a href="#community">Community</a></li>
                 <li><a href="#chat">Chat</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <li><a href="/blog">Blog</a></li>
                 <li><a href="#settings" id="settings">Settings</a></li>
                 <br><br>
                 <li><a href="/signout" id="logout">Logout</a></li>
@@ -56,6 +56,36 @@
             </form>
             <button class="bellbtn"><i class="fa-regular fa-bell"></i></button>
         </div>
+        
+        <div class="row justify-content-center mt-3">
+            <div class="col-md-5 col-sm-12 border-bottom">
+                <h1>
+                        Add a post 
+                </h1>
+                <form action="" method="post">
+                    {% csrf_token %}
+
+                    {{ form }}
+                    <br><br>
+                    <button type="submit">Submit!</button>
+                </form>
+            </div>
+        </div>
+
+        {% for post in post_thought %}
+        <div class="row justify-content-center mt-3">
+            <div class="col-md-5 col-sm-12 border-bottom">
+                <h1>
+                        Post
+                </h1>
+                <p><strong>{{post.author }}</strong> {{ post.created_on }}</p>
+                <p>{{ post.body }}</p>
+                
+            </div>
+        </div>
+        {% endfor %} 
+    </div>
+    
 
         
     </section>

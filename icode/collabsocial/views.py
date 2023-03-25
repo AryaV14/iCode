@@ -28,10 +28,19 @@ class PostListView(View):
         context = {
             'post_list' : posts,
             'form' :form,
-            'name': request.user
+            'name' : request.user.first_name
+
         }
 
         return render(request, 'collabsocial/collab.html', context)
         
+class PostDetailView(View):
+    def get(self, request,pk, *args, **kwargs):
+        post = Post.objects.get(pk=pk)
 
+        context = {
+            'post' : post
+        }
+        return render(request, 'collabsocial/post_details.html', context)
+      
     

@@ -32,15 +32,18 @@
     background-color:white;
     border-radius: 0.5rem;
 }
-.find h1{
+h1{
+    position: absolute;
     text-align: left;
-    margin-left: 3.6rem;
+    margin-left: 20rem;
     font-size: 26px;
+    top: 36rem;
+    left: 18.7rem;
 }
 .find form{
     position: absolute;
-    /* top: 14rem; */
-    /* left: 18rem; */
+    top: 4.2rem;
+    /* left: 8rem; */
     width: 44rem;
 height: 20rem;
 }
@@ -116,7 +119,7 @@ height: 20rem;
     margin-left: -12rem;
     background-color: blue; */
     position: absolute;
-    top: 36rem;
+    top: 40rem;
     left: 18.7rem;
     width: 720px;
     height: 520px;
@@ -144,16 +147,27 @@ border-radius: 0.5rem;
     font-family: 'Roboto';
     padding: 0.3rem 0.6rem;
 } */
-.skill-input{
-    height: 36px;
+.find .newskill{
+    /* height: 36px;
     width: 250px;
     position: absolute;
+    resize: none;
     top: 23rem;
     left: 35rem;
     border-radius: 0.5rem;
     border: none;
+    background-color: #e2110d;
+    padding-left: 1rem; */
     background-color: #F4F0F9;
-    padding-left: 1rem;
+    width: 250px;
+    height: 22px;
+    border-radius: 0.5rem;
+    resize: none;
+    font-size: 18px;
+    font-family: 'Roboto';
+    margin-top: 15px;
+    margin-left: 124px;
+    padding: 0.6rem 0.6rem;
  }
  .skill-input::placeholder{
     font-family: 'Roboto';
@@ -162,11 +176,11 @@ border-radius: 0.5rem;
  }
  
  .add-btn{
-    height: 40px;
-    width: 40px;
+    height: 44px;
+    width: 44px;
     position: absolute;
-    top: 22.94rem;
-    left: 50rem;
+    top: 22.86rem;
+    left: 52rem;
     text-align: center;
     color: rgb(52, 52, 52);
     border-color: black;
